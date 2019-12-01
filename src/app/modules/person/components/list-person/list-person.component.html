@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+    <mat-list>
+        <h3 mat-subheader> Lista Personas </h3>
+        <mat-list-item *ngFor="let person of persons">
+          <mat-icon mat-list-icon color="primary" >account_box</mat-icon>
+          <h4 mat-line>{{person.firstname}}</h4>
+          <p mat-line> {{person.lastname}} </p>
+          <button (click)="editPerson(person)" mat-icon-button color="accent" >
+            <mat-icon> edit </mat-icon>
+          </button>
+          <button (click)="deletePerson(person.idPerson)" mat-icon-button color="warn" >
+            <mat-icon> delete </mat-icon>
+          </button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+  </mat-card>
